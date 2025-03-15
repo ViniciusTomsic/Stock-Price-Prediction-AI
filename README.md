@@ -23,7 +23,7 @@ I created a funcition process_data to deal with the data frame, it takes 6 argum
 Next step was to create some new freatures for both stocks PETR4 and BVSP and adding the target to train the model. 
 My data already had Closing Price, Open, High, Low and Volume, and to improve model performance I added SMA (slow moving average) with 21, 80, 200 and 1000 as periods. Besides that, I added STOCH, ATR and RSI to PETR4 stock. 
 
-```
+```python
 df['STOCH'] = TA.STOCH(df)
 df['ATR'] = TA.ATR(df)
 df['RSI'] = TA.RSI(df)
@@ -40,7 +40,7 @@ df2['SMA80_2'] = df2['Close'] / TA.SMA(df2, 80)
 The target takes 3 params in consideration shift, percentage and up (True or False), shift is the interval of days we are predicting, percentage is the variation we want to detect and up indicates if we are predicting the rise or fall of *Closing Price*. Note that shift is used as an interval of days and not as a step, i.e. we are trying to predict if the stock moved up or down by some percentage change in a window of 1 or more days, if the Closing Price is greater (or lower) in any of those days compared with today's Closing Price my target is 1, if not the target is set as 0. 
 
 
-```
+```python
 if up:
     df['Target'] = (
         df['Close'].shift(-shift).rolling(window=shift, min_periods=1).max() > (1 + percentage) * df['Close']
