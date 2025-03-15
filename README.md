@@ -54,7 +54,24 @@ Lastly, the param test period is used to split the data, since the data is a tim
 
 Note: This method using a window has proven to be better than predicting the market for a specific day in advance.
 
+# Test model function
+Before creating any model I've created a function to automate the training process, the function test_model takes 5 params: df, test, features, model and proba. 
 
+1. df: is the train dataframe already split.
+2. test: validation set to evaluate the model, the group of n days after train set. 
+3. features: all the columns we want to use to train the model, excluding the target. 
+4. model: its the model itself.
+5. proba: is the threshold used to predict the target, default value is 0.5. 
+
+This function is quite simple, it trains the model and uses predict proba to set a value for the prediction, if higher than the threshold the prediction is 1, if lower the predicted class is 0. Lastly, the function returns a df with the target and prediction for every day in the test set. 
+
+# Models
+With the automated process it was possible to test various IA models, I tried Ranfom Forest Classifier, XGBoost, LSTM, SVM and 1 dimensional Convolutional Network. 
+
+## Metrics
+To evaluate Supervised Learning models I used precision and recall, the main metric I wanted to optimize was precision, altought I noticed that some models had very high precisions, like 1. In those cases the recall was to low, so I changed the metric for optimization to F-beta score that balances recall and precision. I used beta equals 0.5 and 0.4 dependind on the case. 
+
+Firstly, I initially thought that Neural Network methods would give best results, since LSTM is capable of memorize previous data and use this to adjust the weights, and Convulotional Neural Network is a strong method to preprocess data and finding patterns, though those. 
 
 
 
