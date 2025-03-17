@@ -210,7 +210,17 @@ fig.update_layout(title=f'VALE3 - Preço de Fechamento vs Previsões de Queda<br
 fig.show()
 ```
 # Results 
-Using this logic presented here I was able to iterate and try different solutions, looking back now I think the biggest challenge I've faced was to balance precision and recall, because I did want to maximize precision, that was my main metric, but I wanted a minimum recall to obtain a good model. 
+Using this logic presented here I was able to iterate and try different solutions, looking back now I think the biggest challenge I've faced was to balance precision and recall, because I did want to maximize precision that was my main metric, but I wanted a minimum recall to obtain a good model. 
+
+It's not the purpose of this diretory to show my entire code, because it represents months of work, although I brought some strong results to showcase the power of this approach. 
+
+![Resultados PETR4 baixa](PETR4_baixa.png)
+
+![Resultados PETR4 alta](PETR4_alta.png)
+
+![Resutlados VALE3 baixa](VALE_baixa.png)
+
+![Resultados VALE3 alta](VALE_alta.png)
 
 
 
