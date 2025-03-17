@@ -218,7 +218,7 @@ It's not the purpose of this diretory to show my entire code, because it represe
 
 ![Resultados PETR4 alta](PETR4_alta.png)
 
-![Resutlados VALE3 baixa](VALE_baixa.png)
+![Resutlados VALE3 baixa](VALE3_baixa.png)
 
 ![Resultados VALE3 alta](VALE_alta.png)
 
