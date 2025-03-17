@@ -222,7 +222,12 @@ It's not the purpose of this diretory to show my entire code, because it represe
 
 ![Resultados VALE3 alta](VALE_alta.png)
 
+# Considerations
+Precisions in the order of *70%* represents very strong results, imagining that a random guess would perform around 50% or less, those models with just few information are able to predict the market's behavior. But, there is a lot of space to improve. 
 
+Firstly, it could be good to test these logic with other models like Random Forest, Neural Network, or even SVM, using feature engeneering and optuna to deal with optimization. In addition, it would be great to add more relevant features, in this case we could add the price of oil barrel or the SP500 index to study if there's a correlation between these informaitions and the price of VALE and PETROBRAS shares. 
+
+Lastly, it would be strong to work with sentimental analysis, using BERT or another library to assign a value to the sentiment about these stocks. 
 
 
 
